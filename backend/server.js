@@ -18,6 +18,7 @@ app.listen(8000, () => {
 // ------------------- Middleware -----------------
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
     cors({
